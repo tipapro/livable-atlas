@@ -1,0 +1,29 @@
+[project]
+name = "livable-pipeline"
+version = "0.1.0"
+description = "Offline data pipeline for Livable Atlas"
+requires-python = ">=3.12"
+dependencies = [
+    "geopandas>=1.2.0",
+    "netcdf4>=1.7.4",
+    "numpy>=2.5.4",
+    "pandas>=3.0.6",
+    "rasterio>=1.5.2",
+    "scipy>=1.18.1",
+    "xarray>=2026.9.0",
+]
+
+[project.scripts]
+atlas = "livable_pipeline.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.13.0,<0.14.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-root = ""
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]

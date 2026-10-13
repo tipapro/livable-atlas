@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="%BASE_URL%favicon.ico" sizes="16x16 32x32 48x48" />
+    <link rel="apple-touch-icon" href="%BASE_URL%apple-touch-icon.png" sizes="180x180" />
+    <link rel="stylesheet" href="/src/guide.css" />
+  </head>
+  <body class="document">
+    <main class="guide">
+      <nav aria-label="Navigation"><a href="./">Open the map</a><a href="./about-ru.html" lang="ru" hreflang="ru">По-русски</a></nav>
+      <p class="eyebrow">Livable Atlas · How it works</p>
+      <h1>Find places that fit your idea of a good life</h1>
+      <p class="lead">Livable Atlas is a free interactive world map for comparing places to live. It brings climate, environment, infrastructure and economic data into one adjustable score.</p>
+      <h2>What does the map measure?</h2>
+      <p>Each land cell on a 0.25° grid, excluding Antarctica, is scored from 0 to 100 using 30 factors in six groups:</p>
+      <ul>
+        <li><strong>Climate:</strong> summer heat, winter comfort, humidity, sunshine, rain, wind and comfortable months.</li>
+        <li><strong>Country and region:</strong> regional GDP per capita, human development, homicide rate and price level.</li>
+        <li><strong>Infrastructure:</strong> travel time to cities, proximity to a large metropolitan area and airport, and population density.</li>
+        <li><strong>Natural hazards:</strong> cyclones, earthquakes, wildfires and floods.</li>
+        <li><strong>Environment:</strong> annual fine-particle air pollution (PM2.5).</li>
+        <li><strong>Geography:</strong> distance to water, elevation and terrain ruggedness.</li>
+      </ul>
+      <h2>How are livability scores calculated?</h2>
+      <p>The California preset favours sunny, mild weather, comfortable winters, accessible cities and a developed economy. Each factor has a preferred range, a tolerance and a weight. Factor scores are averaged within groups, then combined using group weights. Key factors apply an additional penalty outside their preferred range. No place is excluded for a low score; missing values are skipped.</p>
+      <p>These are preference-based comparisons, not an objective ranking of the world's best cities. Change the ranges and weights to reflect what matters to you. A group weight of zero removes that group's influence, including its key-factor penalties.</p>
+      <h2>How to use the map</h2>
+      <ol>
+        <li>Search for a city or select a place on the map to see its score, factor breakdown and monthly climate.</li>
+        <li>Adjust the settings and watch the scores update. The Cities tab lists the 20 highest-scoring cities with at least 100,000 residents under your settings.</li>
+        <li>Pin up to three places to compare their factors side by side. Save your settings in your browser.</li>
+      </ol>
+      <p>Contrast is on by default: colours spread out similar scores to reveal local differences. Read the legend, or turn Contrast off to use the fixed 0–100 colour scale. The numerical scores stay the same.</p>
+      <h2>Where does the data come from?</h2>
+      <p>Sources include TerraClimate, CRU CL 2.0, Natural Earth, ETOPO, GeoNames, GHSL, OurAirports, Nelson travel-time data, ACAG PM2.5, IBTrACS, GEM, GFED, JRC, UNDP, the World Bank and Kummu regional GDP data. Climate datasets include 1991–2020 and 1961–1990 normals; other layers have their own dates. The map's “About the data” dialog lists each source's period, retrieval date, citation and licence.</p>
+      <p>Read the <a href="https://github.com/tipapro/livable-atlas/blob/main/docs/DATA-SOURCES.md">data provenance and refresh notes</a>, or inspect the <a href="https://github.com/tipapro/livable-atlas">source code</a>.</p>
+      <h2>What are the limitations?</h2>
+      <p>A 0.25° cell is roughly 28 km north to south; local neighbourhoods and microclimates can differ substantially. Some indicators are national or regional averages, and missing data does not lower a score. Historical averages do not predict future climate or today's conditions. Visas, housing availability, taxes, personal circumstances and many other aspects of moving are outside the model.</p>
+      <p>The interface is available in English and Russian. Settings are stored locally in your browser. This is a non-commercial project; the underlying datasets retain their own licences, including GEM's CC BY-NC-SA.</p>
+      <p><a class="cta" href="./">Explore the livability map</a></p>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,418 @@
+{
+  "version": 2,
+  "grid": {
+    "res": 0.25,
+    "width": 1440,
+    "height": 720,
+    "west": -180,
+    "north": 90
+  },
+  "cellCount": 264137,
+  "layers": {
+    "pm25": {
+      "file": "layers/pm25.bin.gz",
+      "dtype": "uint16",
+      "scale": 0.1,
+      "offset": 0,
+      "unit": "µg/m³",
+      "source": "acag"
+    },
+    "coast_dist": {
+      "file": "layers/coast_dist.bin.gz",
+      "dtype": "uint16",
+      "scale": 1,
+      "offset": 0,
+      "unit": "km",
+      "source": "coast"
+    },
+    "country": {
+      "file": "layers/country.bin.gz",
+      "dtype": "uint8",
+      "scale": 1,
+      "offset": 0,
+      "unit": "index",
+      "source": "countries"
+    },
+    "sunshine": {
+      "file": "layers/sunshine.bin.gz",
+      "dtype": "uint16",
+      "scale": 1,
+      "offset": 0,
+      "unit": "h",
+      "source": "cru"
+    },
+    "wet_days": {
+      "file": "layers/wet_days.bin.gz",
+      "dtype": "uint16",
+      "scale": 1,
+      "offset": 0,
+      "unit": "days",
+      "source": "cru"
+    },
+    "cold_sun": {
+      "file": "layers/cold_sun.bin.gz",
+      "dtype": "uint8",
+      "scale": 0.5,
+      "offset": 0,
+      "unit": "%",
+      "source": "cru"
+    },
+    "elevation": {
+      "file": "layers/elevation.bin.gz",
+      "dtype": "uint16",
+      "scale": 1,
+      "offset": -500,
+      "unit": "m",
+      "source": "etopo"
+    },
+    "ruggedness": {
+      "file": "layers/ruggedness.bin.gz",
+      "dtype": "uint16",
+      "scale": 1,
+      "offset": 0,
+      "unit": "m",
+      "source": "etopo"
+    },
+    "seismic_pga": {
+      "file": "layers/seismic_pga.bin.gz",
+      "dtype": "uint16",
+      "scale": 0.001,
+      "offset": 0,
+      "unit": "g",
+      "source": "gem"
+    },
+    "dist_bigcity": {
+      "file": "layers/dist_bigcity.bin.gz",
+      "dtype": "uint16",
+      "scale": 1,
+      "offset": 0,
+      "unit": "km",
+      "source": "geonames"
+    },
+    "wildfire": {
+      "file": "layers/wildfire.bin.gz",
+      "dtype": "uint16",
+      "scale": 0.01,
+      "offset": 0,
+      "unit": "%",
+      "source": "gfed"
+    },
+    "pop_density": {
+      "file": "layers/pop_density.bin.gz",
+      "dtype": "uint16",
+      "scale": 1,
+      "offset": 0,
+      "unit": "people/km²",
+      "source": "ghsl"
+    },
+    "cyclone_freq": {
+      "file": "layers/cyclone_freq.bin.gz",
+      "dtype": "uint16",
+      "scale": 0.01,
+      "offset": 0,
+      "unit": "/decade",
+      "source": "ibtracs"
+    },
+    "flood": {
+      "file": "layers/flood.bin.gz",
+      "dtype": "uint8",
+      "scale": 0.5,
+      "offset": 0,
+      "unit": "%",
+      "source": "jrc_flood"
+    },
+    "gdp_pc": {
+      "file": "layers/gdp_pc.bin.gz",
+      "dtype": "uint16",
+      "scale": 10,
+      "offset": 0,
+      "unit": "$",
+      "source": "kummu"
+    },
+    "travel_city": {
+      "file": "layers/travel_city.bin.gz",
+      "dtype": "uint16",
+      "scale": 1,
+      "offset": 0,
+      "unit": "min",
+      "source": "nelson"
+    },
+    "dist_airport": {
+      "file": "layers/dist_airport.bin.gz",
+      "dtype": "uint16",
+      "scale": 1,
+      "offset": 0,
+      "unit": "km",
+      "source": "ourairports"
+    },
+    "warm_tmax": {
+      "file": "layers/warm_tmax.bin.gz",
+      "dtype": "uint8",
+      "scale": 0.5,
+      "offset": -60,
+      "unit": "°C",
+      "source": "terraclimate"
+    },
+    "warm_tmin": {
+      "file": "layers/warm_tmin.bin.gz",
+      "dtype": "uint8",
+      "scale": 0.5,
+      "offset": -60,
+      "unit": "°C",
+      "source": "terraclimate"
+    },
+    "cold_tmax": {
+      "file": "layers/cold_tmax.bin.gz",
+      "dtype": "uint8",
+      "scale": 0.5,
+      "offset": -60,
+      "unit": "°C",
+      "source": "terraclimate"
+    },
+    "cold_tmin": {
+      "file": "layers/cold_tmin.bin.gz",
+      "dtype": "uint8",
+      "scale": 0.5,
+      "offset": -60,
+      "unit": "°C",
+      "source": "terraclimate"
+    },
+    "warm_tdew": {
+      "file": "layers/warm_tdew.bin.gz",
+      "dtype": "uint8",
+      "scale": 0.5,
+      "offset": -60,
+      "unit": "°C",
+      "source": "terraclimate"
+    },
+    "seasonality": {
+      "file": "layers/seasonality.bin.gz",
+      "dtype": "uint8",
+      "scale": 0.25,
+      "offset": 0,
+      "unit": "°C",
+      "source": "terraclimate"
+    },
+    "frost_months": {
+      "file": "layers/frost_months.bin.gz",
+      "dtype": "uint8",
+      "scale": 1,
+      "offset": 0,
+      "unit": "mo",
+      "source": "terraclimate"
+    },
+    "precip_annual": {
+      "file": "layers/precip_annual.bin.gz",
+      "dtype": "uint16",
+      "scale": 1,
+      "offset": 0,
+      "unit": "mm",
+      "source": "terraclimate"
+    },
+    "wind_mean": {
+      "file": "layers/wind_mean.bin.gz",
+      "dtype": "uint8",
+      "scale": 0.1,
+      "offset": 0,
+      "unit": "m/s",
+      "source": "terraclimate"
+    },
+    "hdi": {
+      "file": "layers/hdi.bin.gz",
+      "dtype": "uint16",
+      "scale": 0.001,
+      "offset": 0,
+      "unit": "index",
+      "source": "undp"
+    },
+    "homicide": {
+      "file": "layers/homicide.bin.gz",
+      "dtype": "uint16",
+      "scale": 0.01,
+      "offset": 0,
+      "unit": "/100k",
+      "source": "worldbank"
+    },
+    "price_level": {
+      "file": "layers/price_level.bin.gz",
+      "dtype": "uint16",
+      "scale": 0.001,
+      "offset": 0,
+      "unit": "ratio",
+      "source": "worldbank"
+    }
+  },
+  "monthly": {
+    "tmax": {
+      "file": "monthly/tmax.bin.gz",
+      "dtype": "uint8",
+      "scale": 0.5,
+      "offset": -60,
+      "unit": "°C",
+      "source": "terraclimate"
+    },
+    "tmin": {
+      "file": "monthly/tmin.bin.gz",
+      "dtype": "uint8",
+      "scale": 0.5,
+      "offset": -60,
+      "unit": "°C",
+      "source": "terraclimate"
+    },
+    "tdew": {
+      "file": "monthly/tdew.bin.gz",
+      "dtype": "uint8",
+      "scale": 0.5,
+      "offset": -60,
+      "unit": "°C",
+      "source": "terraclimate"
+    },
+    "prec": {
+      "file": "monthly/prec.bin.gz",
+      "dtype": "uint16",
+      "scale": 1,
+      "offset": 0,
+      "unit": "mm",
+      "source": "terraclimate"
+    }
+  },
+  "sources": {
+    "acag": {
+      "name": "ACAG V6.GL.02.04 satellite-derived PM2.5 (2022 annual mean, 0.1°)",
+      "url": "https://sites.wustl.edu/acag/datasets/surface-pm2-5/",
+      "license": "Free to use with citation",
+      "citation": "Shen, S., Li, C., van Donkelaar, A., et al. (2024). Enhancing global estimation of fine particulate matter concentrations by including geophysical a priori information in deep learning. ACS ES&T Air 1, 332–345.",
+      "period": "2022 annual mean (global V6.GL.02.04 file; manual download)",
+      "retrieved": "2026-10-12"
+    },
+    "coast": {
+      "name": "Natural Earth 10m coastline, rivers and lakes",
+      "url": "https://www.naturalearthdata.com/",
+      "license": "Public domain",
+      "citation": "Made with Natural Earth.",
+      "period": "Natural Earth 5.0.0 (coastline 5.0.0-pre9, rivers and lakes 5.0.0)",
+      "retrieved": "2026-10-12"
+    },
+    "countries": {
+      "name": "Natural Earth admin 0 countries (10m)",
+      "url": "https://www.naturalearthdata.com/",
+      "license": "Public domain",
+      "citation": "Made with Natural Earth.",
+      "period": "Natural Earth 5.1.1",
+      "retrieved": "2026-10-12"
+    },
+    "cru": {
+      "name": "CRU CL 2.0 10′ climatology, 1961–1990 (sunshine, wet days)",
+      "url": "https://crudata.uea.ac.uk/cru/data/hrg/tmc/",
+      "license": "Free download, no explicit licence; cite the paper",
+      "citation": "New, M., Lister, D., Hulme, M., Makin, I. (2002). A high-resolution data set of surface climate over global land areas. Climate Research 21, 1–25.",
+      "period": "1961–1990 climatology (CRU CL 2.0, published 2002)",
+      "retrieved": "2026-10-13"
+    },
+    "etopo": {
+      "name": "ETOPO 2022 Global Relief Model (60 arc-second)",
+      "url": "https://www.ncei.noaa.gov/products/etopo-global-relief-model",
+      "license": "Public domain (NOAA NCEI)",
+      "citation": "NOAA National Centers for Environmental Information (2022). ETOPO 2022 15 Arc-Second Global Relief Model. doi:10.25921/fd45-gt74",
+      "period": "ETOPO 2022 v1",
+      "retrieved": "2026-10-12"
+    },
+    "gem": {
+      "name": "GEM Global Seismic Hazard Map v2023.1 (PGA, 10% in 50 years, rock)",
+      "url": "https://www.globalquakemodel.org/product/global-seismic-hazard-map",
+      "license": "CC BY-NC-SA 4.0",
+      "citation": "Pagani, M., Garcia-Pelaez, J., Gee, R., et al. (2023). The 2023 Global Earthquake Model (GEM) Global Seismic Hazard Map (version 2023.1). doi:10.5281/zenodo.8409647",
+      "period": "version 2023.1",
+      "retrieved": "2026-10-12"
+    },
+    "geonames": {
+      "name": "GeoNames cities15000",
+      "url": "https://www.geonames.org/",
+      "license": "CC BY 4.0",
+      "citation": "GeoNames geographical database (geonames.org).",
+      "period": "database snapshot of the retrieval date",
+      "retrieved": "2026-10-12"
+    },
+    "gfed": {
+      "name": "GFED5 burned area (2001–2020)",
+      "url": "https://www.globalfiredata.org/",
+      "license": "CC BY 4.0",
+      "citation": "Chen, Y., Hall, J., van Wees, D., et al. (2023). Multi-decadal trends and variability in burned area from the fifth version of the Global Fire Emissions Database (GFED5). Earth System Science Data 15, 5227–5259.",
+      "period": "burned area 2001–2020 (annual mean)",
+      "retrieved": "2026-10-12"
+    },
+    "ghsl": {
+      "name": "GHS-POP R2023A, epoch 2020",
+      "url": "https://human-settlement.emergency.copernicus.eu/ghs_pop2023.php",
+      "license": "CC BY 4.0",
+      "citation": "Schiavina, M., Freire, S., Carioli, A., MacManus, K. (2023). GHS-POP R2023A – GHS population grid multitemporal (1975–2030). European Commission, Joint Research Centre. doi:10.2905/2FF68A52-5B5B-4A22-8F40-C41DA8332CFE",
+      "period": "population epoch 2020 (release R2023A)",
+      "retrieved": "2026-10-12"
+    },
+    "ibtracs": {
+      "name": "IBTrACS v04r01 (since 1980)",
+      "url": "https://www.ncei.noaa.gov/products/international-best-track-archive",
+      "license": "Public domain (NOAA NCEI)",
+      "citation": "Knapp, K.R., Kruk, M.C., Levinson, D.H., Diamond, H.J., Neumann, C.J. (2010). The International Best Track Archive for Climate Stewardship (IBTrACS). Bulletin of the American Meteorological Society 91, 363–376.",
+      "period": "storm seasons 1980–2025 (v04r01)",
+      "retrieved": "2026-10-12"
+    },
+    "jrc_flood": {
+      "name": "JRC flood hazard map of the World, 100-year return period",
+      "url": "https://data.jrc.ec.europa.eu/dataset/jrc-floods-floodmapgl_rp100y-tif",
+      "license": "CC BY 4.0",
+      "citation": "Dottori, F., Salamon, P., Bianchi, A., Alfieri, L., Hirpa, F.A., Feyen, L. (2016). Development and evaluation of a framework for global flood hazard mapping. Advances in Water Resources 94, 87–102.",
+      "period": "100-year flood depth map, 2016 release",
+      "retrieved": "2026-10-12"
+    },
+    "kummu": {
+      "name": "Kummu et al. 2025 GDP per capita (PPP), admin 2, 2024",
+      "url": "https://doi.org/10.5281/zenodo.10976733",
+      "license": "CC BY 4.0",
+      "citation": "Kummu, M., Kosonen, M., Masoumzadeh Sayyar, S. (2025). Downscaled gridded global dataset for gross domestic product (GDP) per capita at purchasing power parity (PPP) over 1990–2022. Scientific Data. doi:10.1038/s41597-025-04487-x",
+      "period": "2024 (last band of 1990–2024; Zenodo version of 2026-03-13)",
+      "retrieved": "2026-10-13"
+    },
+    "nelson": {
+      "name": "Travel time to cities ≥ 50,000 (2015)",
+      "url": "https://figshare.com/articles/dataset/Travel_time_to_cities_and_ports_in_the_year_2015/7638134",
+      "license": "CC BY 4.0",
+      "citation": "Nelson, A., Weiss, D.J., van Etten, J., et al. (2019). A suite of global accessibility indicators. Scientific Data 6, 266.",
+      "period": "2015",
+      "retrieved": "2026-10-12"
+    },
+    "ourairports": {
+      "name": "OurAirports (large airports)",
+      "url": "https://ourairports.com/data/",
+      "license": "Public domain",
+      "citation": "OurAirports open data (ourairports.com).",
+      "period": "database snapshot of the retrieval date",
+      "retrieved": "2026-10-12"
+    },
+    "terraclimate": {
+      "name": "TerraClimate 1991–2020 monthly normals",
+      "url": "https://www.climatologylab.org/terraclimate.html",
+      "license": "CC0 1.0",
+      "citation": "Abatzoglou, J.T., Dobrowski, S.Z., Parks, S.A., Hegewisch, K.C. (2018). TerraClimate, a high-resolution global dataset of monthly climate and climatic water balance from 1958–2015. Scientific Data 5, 170191.",
+      "period": "1991–2020 monthly normals",
+      "retrieved": "2026-10-12"
+    },
+    "undp": {
+      "name": "UNDP Human Development Report 2025, HDI",
+      "url": "https://hdr.undp.org/data-center/documentation-and-downloads",
+      "license": "CC BY 3.0 IGO",
+      "citation": "UNDP (2025). Human Development Report 2025. United Nations Development Programme.",
+      "period": "HDI 2023 (latest year per country, HDR 2025)",
+      "retrieved": "2026-10-12"
+    },
+    "worldbank": {
+      "name": "World Bank World Development Indicators",
+      "url": "https://data.worldbank.org/",
+      "license": "CC BY 4.0",
+      "citation": "World Bank, World Development Indicators: VC.IHR.PSRC.P5, PA.NUS.PPP, PA.NUS.FCRF.",
+      "period": "latest of the 5 most recent values per country: homicide mostly 2015–2023, price level mostly 2025 (WDI update of 2026-10-08)",
+      "retrieved": "2026-10-12"
+    }
+  },
+  "builtAt": "2026-10-13T21:39:38Z"
+}

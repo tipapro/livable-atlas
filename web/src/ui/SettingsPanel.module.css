@@ -1,0 +1,141 @@
+.presets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin: 6px 0;
+}
+
+.presets select {
+  flex: 1 1 100%;
+}
+
+.strength {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 6px 0;
+}
+
+.strength input {
+  flex: 1;
+  min-width: 80px;
+}
+
+.group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 10px 0 2px;
+  font-size: 13px;
+  border-bottom: 1px solid var(--c-border);
+}
+
+.group h3 {
+  flex: 1;
+  margin: 0;
+  font-size: inherit;
+}
+
+.group input {
+  flex: 1;
+  min-width: 0;
+}
+
+.row {
+  padding: 4px 0;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.name {
+  font-weight: 500;
+}
+
+.noData {
+  flex: none;
+  color: var(--c-text-muted);
+  font-style: italic;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.controls input[type='range'] {
+  flex: 1;
+  min-width: 0;
+}
+
+.critical {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.details {
+  margin-top: 4px;
+  padding-left: 8px;
+  border-left: 2px solid var(--c-border);
+}
+
+.desc {
+  margin: 0 0 4px;
+  color: var(--c-text-muted);
+  font-size: 12px;
+}
+
+.field,
+.ref {
+  display: grid;
+  grid-template-columns: 80px 1fr 5.5ch;
+  align-items: center;
+  gap: 6px;
+  margin: 2px 0;
+}
+
+.field input[type='range'] {
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+}
+
+.field input[type='number'] {
+  width: 70px;
+}
+
+.field output {
+  text-align: right;
+}
+
+.ref {
+  align-items: start;
+  margin-top: 6px;
+  color: var(--c-danger);
+}
+
+.ref > span {
+  padding-top: 8px;
+}
+
+.refTrack {
+  position: relative;
+  padding-top: 8px;
+  border-top: 1px solid var(--c-text-muted);
+}
+
+/* The native thumb is 16px wide, so its centre travels from 8px to width-8px. */
+.tick {
+  position: absolute;
+  top: -4px;
+  left: calc(8px + (100% - 16px) * var(--pos));
+  width: 2px;
+  height: 8px;
+  margin-left: -1px;
+  background: var(--c-danger);
+}

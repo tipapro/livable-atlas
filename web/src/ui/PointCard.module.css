@@ -1,0 +1,138 @@
+.card {
+  position: absolute;
+  top: 60px; /* below the top bar */
+  right: var(--space-3);
+  z-index: 10;
+  width: var(--card-w);
+  max-width: calc(100% - 24px);
+  max-height: calc(100% - 60px - 88px); /* stops above the dock */
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding: 8px 10px;
+  border-radius: var(--radius-l);
+  background: var(--surface-raised);
+  box-shadow: var(--shadow-1);
+  font-size: 12px;
+}
+
+.card p {
+  margin: 4px 0;
+}
+
+.head {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+}
+
+.badge {
+  flex: none;
+  box-sizing: border-box;
+  min-width: 48px;
+  padding: var(--space-2);
+  border-radius: var(--radius-s);
+  background: var(--c-track);
+  color: var(--c-text);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.1;
+  text-align: center;
+}
+
+/* Contrast flips where the palette crosses mid-teal: both sides stay above 3.8:1. */
+.onDark {
+  color: var(--c-accent-text);
+}
+
+.onLight {
+  color: var(--c-text);
+}
+
+.place {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+  gap: 2px;
+  font-size: var(--fs-m);
+}
+
+.place small {
+  color: var(--c-text-muted);
+  font-size: var(--fs-s);
+}
+
+.card > button:last-child {
+  width: 100%;
+  margin-top: var(--space-2);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 6px 0;
+}
+
+.table th,
+.table td {
+  padding: 2px 4px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--c-border-soft);
+}
+
+.bar {
+  display: inline-block;
+  width: 40px;
+  height: 8px;
+  margin-right: var(--space-1);
+  background: var(--c-track);
+  border-radius: 2px;
+}
+
+.bar span {
+  display: block;
+  height: 100%;
+  background: var(--c-success);
+  border-radius: 2px;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+}
+
+.legend i {
+  display: inline-block;
+  width: 12px;
+  height: 8px;
+  margin-right: 4px;
+}
+
+.toggle {
+  padding-left: 0;
+  color: var(--c-accent);
+}
+
+.table td:nth-child(3) {
+  white-space: nowrap;
+}
+
+/* Mobile: the card is the content of the sheet's Place tab. */
+@media (max-width: 767px) {
+  .card {
+    position: static;
+    width: auto;
+    max-width: none;
+    max-height: none;
+    overflow: visible;
+    padding: 0;
+    box-shadow: none;
+    background: transparent;
+  }
+}
+
+.keyTag {
+  color: var(--c-text-muted);
+}

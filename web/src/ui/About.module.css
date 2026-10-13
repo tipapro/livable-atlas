@@ -1,0 +1,46 @@
+.dialog {
+  position: fixed;
+  inset: 60px auto auto 50%; /* overrides the UA's centred modal dialog */
+  margin: 0;
+  border: 0;
+  color: inherit;
+  transform: translateX(-50%);
+  z-index: 30;
+  width: 560px;
+  max-width: calc(100% - 24px);
+  max-height: calc(100% - 120px);
+  overflow: auto;
+  box-sizing: border-box;
+  padding: 8px 12px;
+  border-radius: var(--radius-l);
+  background: var(--surface-raised);
+  box-shadow: var(--shadow-2);
+  font-size: 12px;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dialog h3 {
+  margin: 10px 0 4px;
+  font-size: 13px;
+}
+
+.dialog ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.dialog li {
+  padding: 4px 0;
+  border-bottom: 1px solid var(--c-border-soft);
+}
+
+.dialog small {
+  display: block;
+  color: var(--c-text-muted);
+}

@@ -1,0 +1,40 @@
+.wrap {
+  overflow-x: auto;
+}
+
+.empty {
+  color: var(--c-text-muted);
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table th,
+.table td {
+  padding: 3px 8px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--c-border-soft);
+}
+
+.table small {
+  display: block;
+  font-weight: normal;
+  color: var(--c-text-muted);
+}
+
+.best {
+  background: var(--c-success-bg);
+  font-weight: bold;
+}
+
+.sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}

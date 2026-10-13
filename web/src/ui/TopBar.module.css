@@ -1,0 +1,125 @@
+/* Floats between the side panel and the right gap; the gaps stay clickable map. */
+.bar {
+  position: absolute;
+  top: var(--space-3);
+  left: var(--left);
+  right: var(--space-3);
+  z-index: 20; /* the results list drops over the card */
+  display: flex;
+  gap: var(--space-2);
+  height: 40px;
+  pointer-events: none;
+}
+
+.bar > * {
+  pointer-events: auto;
+}
+
+.side {
+  flex: 1 1 0;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-2);
+}
+
+.chip {
+  height: 100%;
+  padding: 0 var(--space-3);
+  border-color: transparent;
+  border-radius: var(--radius-l);
+  background: var(--surface-raised);
+  box-shadow: var(--shadow-1);
+  white-space: nowrap;
+}
+
+.chip:not(:disabled):hover {
+  background: var(--c-hover);
+}
+
+.search {
+  position: relative;
+  flex: 0 1 420px;
+  min-width: 0;
+}
+
+.search input {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding-left: 36px;
+  border-color: transparent;
+  border-radius: var(--radius-l);
+  box-shadow: var(--shadow-1);
+  font-size: var(--fs-l);
+}
+
+.searchIcon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: var(--c-text-muted);
+  pointer-events: none;
+}
+
+.results {
+  position: absolute;
+  top: calc(100% + var(--space-1));
+  left: 0;
+  right: 0;
+  max-height: 320px;
+  overflow-y: auto;
+  margin: 0;
+  padding: var(--space-1);
+  list-style: none;
+  border-radius: var(--radius-l);
+  background: var(--surface-raised);
+  box-shadow: var(--shadow-2);
+  font-size: var(--fs-l);
+}
+
+.results li {
+  padding: 6px var(--space-2);
+  border-radius: var(--radius-s);
+  cursor: pointer;
+}
+
+.results li:hover,
+.results li[aria-selected='true'] {
+  background: var(--c-hover);
+}
+
+.sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* Mobile: the search takes the row, locale and About become icon buttons (their aria-labels stay). */
+@media (max-width: 767px) {
+  .bar > .side:first-child {
+    display: none;
+  }
+
+  .actions {
+    flex: none;
+  }
+
+  .search {
+    flex: 1 1 auto;
+  }
+
+  .chip {
+    width: 40px;
+    padding: 0;
+  }
+
+  .label {
+    display: none;
+  }
+}

@@ -1,0 +1,42 @@
+.sheet {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 15; /* over the dock and the attribution, under the top bar and its results list */
+  display: flex;
+  flex-direction: column;
+  height: var(--sheet-peek);
+  border-radius: var(--radius-l) var(--radius-l) 0 0;
+  background: var(--surface-raised);
+  box-shadow: var(--shadow-2);
+  transition: height var(--dur);
+}
+
+.half {
+  height: 50%;
+}
+
+.full {
+  height: calc(100% - 60px); /* 8 px below the top bar (12 + 40) */
+}
+
+.handle {
+  flex: none;
+  width: 100%;
+  height: 24px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-l) var(--radius-l) 0 0;
+  background: transparent;
+  cursor: ns-resize;
+  touch-action: none; /* the drag resizes the sheet instead of scrolling the page */
+}
+
+.handle::before {
+  content: '';
+  width: 36px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--c-track);
+}

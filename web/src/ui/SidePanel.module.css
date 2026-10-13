@@ -1,0 +1,101 @@
+.panel {
+  position: absolute;
+  top: var(--space-3);
+  bottom: var(--space-3);
+  left: var(--space-3);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  width: var(--panel-w);
+  max-width: calc(100% - 2 * var(--space-3));
+  box-sizing: border-box;
+  border-radius: var(--radius-l);
+  background: var(--surface);
+  box-shadow: var(--shadow-1);
+  font-size: var(--fs-s);
+}
+
+.rail {
+  bottom: auto;
+  width: var(--rail-w);
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-2) 0;
+}
+
+.current {
+  color: var(--c-accent);
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-2) 0 var(--space-3);
+  border-bottom: 1px solid var(--c-border);
+}
+
+.tabs {
+  display: flex;
+  flex: 1;
+  gap: var(--space-1);
+}
+
+.tab {
+  padding: var(--space-2) var(--space-2);
+  border: 0;
+  border-bottom: 2px solid transparent;
+  border-radius: var(--radius-s) var(--radius-s) 0 0;
+  background: transparent;
+  color: var(--c-text-muted);
+  font-size: var(--fs-l);
+  white-space: nowrap;
+}
+
+.tab[aria-selected='true'] {
+  border-bottom-color: var(--c-accent);
+  color: var(--c-text);
+  font-weight: 600;
+}
+
+.body {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: var(--space-2) var(--space-3);
+}
+
+.heading {
+  margin: var(--space-1) 0 var(--space-2);
+  font-size: var(--fs-l);
+}
+
+.top {
+  margin: 0;
+  padding-left: var(--space-5);
+  font-size: var(--fs-m);
+}
+
+.top button {
+  width: 100%;
+  justify-content: space-between;
+  padding: var(--space-1) var(--space-2);
+  text-align: left;
+}
+
+/* Mobile: the panel content inside the bottom sheet. */
+.inSheet {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+  font-size: var(--fs-s);
+}
+
+.inSheet .head {
+  padding-top: 0;
+}
+
+.inSheet .tabs {
+  overflow-x: auto; /* four Russian tabs can exceed 375 px */
+}
